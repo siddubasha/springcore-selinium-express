@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+ <bean id="petrol" class="com.siddu.SpringObjectInjPractice.Petrol">
+ <property name="cost" value="200" ></property>
+ </bean>  
+  
+  <bean id="tyres" class="com.siddu.SpringObjectInjPractice.Tyres">
+  <constructor-arg name="raw" value="plastic" type="java.lang.String"></constructor-arg>
+  </bean>
+  
+  <bean id="bike" class="com.siddu.SpringObjectInjPractice.Bike">
+  <constructor-arg name="petrol" ref="petrol"></constructor-arg>
+  <constructor-arg name="tyres" ref="tyres"></constructor-arg>
+  </bean>
+  <bean id="car" class="com.siddu.SpringObjectInjPractice.Car">
+  <constructor-arg name="key" value="available" type="String"></constructor-arg>
+  <constructor-arg name="driverNumber" value="7013730133" type="long"></constructor-arg>
+  <constructor-arg name="petrol" ref="petrol"></constructor-arg>
+  <constructor-arg name="tyres" ref="tyres"></constructor-arg>
+  </bean>
+</beans>

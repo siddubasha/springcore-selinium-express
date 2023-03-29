@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<bean id="jobA" class="com.siddu.SpringCoreAndInjectionPractice.Accountant">
+<constructor-arg name="name" value="siddiq CA" type="java.lang.String"></constructor-arg>
+<constructor-arg name="salary" value="200000" type="long"></constructor-arg>
+</bean>
+<bean id="jobD" class="com.siddu.SpringCoreAndInjectionPractice.Developer">
+<constructor-arg name="name" value="Siddu Dev" type="java.lang.String"></constructor-arg>
+<constructor-arg name="salary" value="200000" type="long"></constructor-arg>
+</bean>
+<bean id="jobT" class="com.siddu.SpringCoreAndInjectionPractice.Tester">
+<property name="name" value="Basha Tes" ></property>
+<property name="salary" value="200000"></property>
+</bean>
+</beans>
